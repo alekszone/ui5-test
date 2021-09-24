@@ -13,11 +13,16 @@
         },
         "title": "{{appTitle}}",
         "description": "{{appDescription}}",
-        "tags": {
-            "keywords": [
-                "{{<keyword1>}}", "{{<keyword2>}}"
-            ]
+         "dataSources": {
+            "invoiceRemote": {
+                "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            }
         }
+
        
     },
     "sap.ui": {
@@ -68,16 +73,13 @@
                     "bundleName": "test.i18n.i18n",
                     "supportedLocales": [""],
                     "fallbackLocale": ""
-                },
-                "uri": "<uriRelativeToManifest>"
+                }
+
             },
             "invoice": {
-                "dataSource": "invoiceRemote"
-            },
-            "": {
-                "dataSource": "<dataSourceAlias>",
-                "settings": {}
-            }
+                "type": "sap.ui.model.json.JSONModel",
+                "uri" : "Invoices.json"
+            }       
         },
         "rootView": {
             "viewName": "test.view.App",
@@ -99,10 +101,26 @@
                 "async": true
             },
             "routes": [
-             
+            {
+                "pattern" : " ",
+                "name"    : "overview",
+                "target": "overview"
+            },
+            {
+                "pattern" : "deatil",
+                "name"  : "detail",
+                "target" : "detail"
+            }             
             ],
             "targets": {
-       
+            "overview":{
+                "viewId" : "overview",
+                "viewName" : "Overview" 
+            },
+            "detail" :{
+                "viewId" : "detail",
+                "viewName" : "Detail"
+            }
 
             }
           

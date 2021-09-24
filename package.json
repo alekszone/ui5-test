@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    
+  },
+  "devDependencies": {"cors-anywhere": "^0.4.4"},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ui5 serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "proxy": "node proxy.js"
   },
   "keywords": [],
   "author": "",

@@ -3,8 +3,9 @@
 		<content>
 			<Button id="helloDialogButton" text="{i18n>openDialogButtonText}" press=".onOpenDialog" class="sapUiSmallMarginEnd"  icon="sap-icon://world" />
 			<Button class="myCustomButton" text="{i18n>showHelloButtonText}" press=".onShowHello" />
-			<Input id="inputText" value="{/recipient/name}" valueLiveUpdate="true" width="80%" />
-			<FormattedText htmltext="Hello  {/recipient/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText" />
+			<Input id="inputText" value="{/recipient/name}" valueLiveUpdate="true" width="80%" description="Hello {/recipient/name }" />
+			<FormattedText htmlText="Hello  {/recipient/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText" />
+			<!-- <FormattedText htmlText="Hello {/recipient/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/> -->
 		</content>
 	</Panel>
 </mvc:View>
