@@ -1,0 +1,7 @@
+specVersion: '2.5'
+metadata:
+  name: beginProject
+type: application
+framework:
+  name: SAPUI5
+  version: "1.94.1"
